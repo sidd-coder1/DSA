@@ -296,21 +296,22 @@
 #     print("It's a special character")
 
 
-amt=int(input("Enter the amount for withdrawal: "))
-print("500 notes =", amt//500)
-amt=amt%500
-print("200 notes =", amt//200)
-amt=amt%200
-print("100 notes =", amt//100)
-amt=amt%100
-print("50 notes =", amt//50)
-amt=amt%50
-print("20 notes =", amt//20)
-amt=amt%20
-print("10 notes =", amt//10)
-amt=amt%10
-print("5 coins =", amt//5)
-amt=amt%5
-print("2 coins =", amt//1)
-amt=amt%1
-print("1 coins =", amt//1)
+# amt=int(input("Enter the amount for withdrawal: "))
+# print("500 notes =", amt//500)    // here we are calculating the number of 500 notes required for the given amount by using floor division operator // which gives us the quotient without the remainder so it will give us the number of 500 notes required for the given amount as output    
+# amt=amt%500       //  here we are calculating the remaining amount after giving the 500 notes by using modulus operator % which gives us the remainder after dividing the amount by 500 so it will give us the remaining amount after giving the 500 notes as output
+# print("200 notes =", amt//200) 
+# amt=amt%200
+# print("100 notes =", amt//100)
+# amt=amt%100
+# print("50 notes =", amt//50)
+# amt=amt%50
+# print("20 notes =", amt//20)
+# amt=amt%20
+# print("10 notes =", amt//10)
+# amt=amt%10
+# print("5 coins =", amt//5)
+# amt=amt%5
+# print("2 coins =", amt//1)
+# amt=amt%1
+# print("1 coins =", amt//1)
+  
