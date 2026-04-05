@@ -1,0 +1,7 @@
+Siddharth is a good boy
+Om is a bad boy
+Maruti is a good boy
+nameagecity('Siddharth', 22, 'Sawantwadi')
+ wow siddharth.
+ How gross Om
+ How smelly Maruti.
