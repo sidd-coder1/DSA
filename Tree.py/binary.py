@@ -60,16 +60,44 @@ class BinaryTree:
         else:
             self.insertNode(self.root,value)
     def insertNode(self,rootNode,value):
-        if value < rootNode.data: 
+        if value < rootNode.data:   
             if rootNode.left is None:
                 rootNode.left = Node(value)
             else:
                 self.insertNode(rootNode.left,value)
-        else:
+        else: 
             if rootNode.right is None:
                 rootNode.right=Node(value)
             else: 
                 self.insertNode(rootNode.right,value)
+    def search(self,value):
+        return self.searchNode(self.root,value)
+    def searchNode(self,rootNode,value):
+        if rootNode is None or rootNode.data == value:
+            return rootNode
+        if value < rootNode.data:
+            return self.searchNode(rootNode.left,value)
+        return self.searchNode(rootNode.right,value)
+    def deleteTree(self):
+        self.root=None
+    def printTree(self):
+        self._printTree(self.root, "", True)
+
+    def _printTree(self, node, indent, last):
+        if node is not None:
+            print(indent, end="")
+
+            if last:
+                print("└── ", end="")
+                indent += "    "
+            else:
+                print("├── ", end="")
+                indent += "│   "
+
+            print(node.data)
+
+            self._printTree(node.left, indent, False)
+            self._printTree(node.right, indent, True)
 
 
 
@@ -78,6 +106,10 @@ btobj=BinaryTree()
 btobj.insert(50)
 btobj.insert(30)
 btobj.insert(70)
-print(btobj.root.data)  # Output: 50
-print(btobj.root.left.data)  # Output: 30
-print(btobj.root.right.data)  # Output: 70  
+btobj.insert(20)
+btobj.insert(40)
+btobj.insert(60)
+btobj.insert(80)
+
+# Print tree
+btobj.printTree()
